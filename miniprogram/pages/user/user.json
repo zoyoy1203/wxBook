@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "用户界面",
+  "usingComponents": {
+   
+    "van-picker": "vant-weapp/picker",
+    "van-cell": "vant-weapp/cell",
+    "van-cell-group": "vant-weapp/cell-group"
+  }
+}

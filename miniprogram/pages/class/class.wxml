@@ -1,0 +1,10 @@
+
+<view>
+  <van-picker 
+  show-toolbar
+  columns="{{ columns }}" 
+  bind:change="onChange" 
+  bind:confirm="onConfirm"
+  visible-item-count="15"
+   />
+</view>

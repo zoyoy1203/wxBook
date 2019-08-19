@@ -1,0 +1,22 @@
+<view>
+ 
+  <view wx:for="{{bookList}}"wx:for-item="item" wx:key="index">
+    <!--//template-->
+    <van-card
+      title="{{item.title}}"
+      thumb="{{item.img}}"
+      desc="{{item.sub2}}"
+      num="{{item.num}}"
+      num-class="reading"
+      link-type="navigateTo"
+      thumb-link="../book/book?index={{index}}"
+    />
+  </view>
+  <view class="{{display1==true?'display_img':'display_imgno'}}">
+    <view class='img'>
+      <image src="cloud://zyy-b2c6cd.7a79-zyy-b2c6cd/images/img1.gif"></image>
+    </view>
+    <text class='text'>您目前还没有订阅相应的书籍哦！</text>
+  </view>
+ 
+</view>

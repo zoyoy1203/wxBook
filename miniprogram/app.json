@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recommend/recommend",
+    "pages/class/class",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/book/book",
+    "pages/book1/book1",
+    "pages/mybooks/mybooks",
+    "pages/classbooks/classbooks",
+    "pages/booklist/booklist"
+  ],
+  "window": {
+    "backgroundColor": "#C20C0C",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#800000",
+    "navigationBarTitleText": "图书推荐",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "images/ico-04.png",
+        "selectedIconPath": "images/ico-04.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/ico-02.png",
+        "selectedIconPath": "images/ico-02.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "分类",
+        "iconPath": "images/ico-05.png",
+        "selectedIconPath": "images/ico-05.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/ico-03.png",
+        "selectedIconPath": "images/ico-03.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

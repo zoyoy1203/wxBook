@@ -1,0 +1,73 @@
+<view>
+
+    <van-notice-bar
+      text="欢迎来到图书推荐小程序！您订阅的图书类别，将会每天实时更新推荐！"
+    />
+    <view class='header'>
+      <view class='header_img'>
+        <image src='{{book.img}}'></image>
+      </view>
+      <view class='header_c'>
+        <view>
+          书名：
+          <text>{{book.title}}</text>
+        </view>
+        <view>
+          类别：
+          <text>{{book.catalog}}</text>
+        </view>
+        <view>
+          阅读数：
+          <text>{{book.num}}</text>
+        </view>
+        <view>
+          发表时间：
+          <text>{{book.time}}</text>
+        </view>
+        <view class='header_c_tags'>
+          <block wx:for="{{book.tags}}" wx:key="index">
+            <van-button plain type="danger" size="mini" wx:if="{{item!=''}}" class='tag'>{{item}}</van-button>
+          </block>
+        </view>
+      </view>
+    </view>
+
+
+    <van-collapse value="{{ activeNames }}" bind:change="onChange">
+      <van-collapse-item title="购买链接：" name="1">
+        <block wx:for="{{book.address}}" wx:key="index" >
+          <view class='buy_address_url'>{{item}}</view>
+        </block>    
+      </van-collapse-item>
+      <van-collapse-item title="内容简介：" name="2">
+        <view>
+          {{book.sub3}}
+        </view>
+      </van-collapse-item>
+    </van-collapse>
+
+  <van-goods-action>
+    <van-goods-action-icon
+      icon="shop-collect"
+      text="首页"
+      bind:click="returnIndex"
+    />
+    <van-goods-action-icon
+      icon="like"
+      text="点赞"
+      bind:click="onClickIcon"
+    />
+    <van-goods-action-button
+      text="收藏"
+      bind:click="onClickCollection"
+      custom-classs="collect"
+
+    />
+    <van-goods-action-button
+      text="好书分享"
+      open-type='share'
+ 
+      custom-class="share"
+    />
+  </van-goods-action>
+</view>

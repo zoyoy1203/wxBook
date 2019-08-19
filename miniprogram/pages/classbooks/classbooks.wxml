@@ -1,0 +1,14 @@
+
+
+<view wx:for="{{bookList}}"wx:for-item="item" wx:key="index">
+    <!--//template-->
+    <van-card
+      title="{{item.title}}"
+      thumb="{{item.img}}"
+      desc="{{item.sub2}}"
+      num="{{item.num}}"
+      num-class="reading"
+      link-type="navigateTo"
+      thumb-link="../book/book?index={{index}}"
+    />
+</view>

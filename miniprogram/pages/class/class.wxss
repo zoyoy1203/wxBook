@@ -1,0 +1,10 @@
+
+.van-tabs--line .van-tabs__wrap{
+  position: fixed;
+}
+.van-picker-column__item {
+font-size:20px;
+}
+.van-picker__cancel,.van-picker__confirm{
+  color: #FF4444!important;
+}

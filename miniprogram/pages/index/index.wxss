@@ -1,0 +1,59 @@
+Page{
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+}
+ swiper{
+     width:100%;
+     height:320rpx;
+ }
+ swiper image{
+     width:100%;
+     height:320rpx;
+ }
+.content{
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  margin: 20rpx auto;
+}
+.title{
+  display: inline-block;
+  width: 95%;
+  height:50rpx;
+  padding-left: 20rpx;
+  border-bottom: 2px solid #fafafa;
+  border-left: 3px solid #FF4444;
+}
+.title_r{
+  float: right;
+  color: #FF4444;
+}
+.title_l{
+  float: left;
+}
+.books{
+  display:flex;
+  width: 750rpx;
+  height: 320rpx;
+  flex-direction: row;
+  padding: 10rpx 30rpx;
+}
+.book{
+  display: flex;
+  flex-direction: column;
+  width:240rpx;
+  height: auto;
+  margin-right: 40rpx;
+}
+.book image{
+  width: 200rpx;
+  height:250rpx;
+  margin: 0 auto;
+}
+.book_title{
+  text-align: center;
+  width: 100%;
+  height: 60rpx;
+  overflow: hidden
+}

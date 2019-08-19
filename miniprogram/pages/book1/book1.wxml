@@ -1,0 +1,50 @@
+<view>
+
+  <van-notice-bar
+    text="欢迎来到图书推荐小程序！您订阅的图书类别，将会每天实时更新推荐！"
+  />
+  <view class='header'>
+    <image src='{{book.pic}}'></image>
+  </view>
+  <view class='header_c'>
+    <view>书名：<text>{{book.title}}</text>
+    </view>
+    <view>类别：<text>{{book.subtitle}}</text></view>
+    <view>作者：<text>{{book.author}}</text></view>
+    <view>发表时间：<text>{{book.pubdate}}</text> </view>
+    <view>出版于：<text>{{book.publisher}}</text></view>
+    <view>地址：<text>{{book.pubplace}}</text></view>
+    <view>语言：<text>{{book.language}}</text></view>
+    <view>标签：<text>{{book.keyword}}</text></view>
+  </view>
+  <view class='summary'>
+    <view class='summary_t'>简介</view>
+    <view>{{book.summary}}</view>
+  </view>
+
+
+
+  <van-goods-action>
+    <van-goods-action-icon
+      icon="shop-collect"
+      text="首页"
+      bind:click="returnIndex"
+    />
+    <van-goods-action-icon
+      icon="like"
+      text="点赞"
+      bind:click="onClickIcon"
+    />
+    <van-goods-action-button
+      text="收藏"
+      bind:click="onClickButton"
+      custom-classs="collect"
+
+    />
+    <van-goods-action-button
+      text="好书分享"
+      open-type='share'
+      custom-class="share"
+    />
+  </van-goods-action>
+</view>

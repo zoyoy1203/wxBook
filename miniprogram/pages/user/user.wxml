@@ -1,0 +1,42 @@
+<view>
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      bindtap="onGetOpenid"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+    <view>
+      <text>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+ <van-picker
+    show-toolbar
+    title="{{bookclass_c[0]||bookclass}}"
+    columns="{{ columns }}"
+    cancel-button-text="订阅类别"
+    custom-class="{{display==true?'display':'display1'}}"
+    bind:cancel="onCancel"
+    bind:confirm="onConfirm"
+  />
+<van-cell
+  title="我的收藏"
+  value=""
+  is-link
+  url="../mybooks/mybooks"
+/>
+<van-cell
+  title="当前版本"
+  value="1.0.1"
+  is-link
+  url=""
+/>
+
+<view bindtap='music' class='music-logo'>
+  <image src='cloud://zyy-b2c6cd.7a79-zyy-b2c6cd/images/music-logo.png'></image>
+</view>
+
+</view>

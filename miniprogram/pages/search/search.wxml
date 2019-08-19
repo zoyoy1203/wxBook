@@ -1,0 +1,10 @@
+<van-search value="{{isbn}}"bind:search="searchInput" placeholder="请输入ISBN书号" />
+  <van-button type="danger"bind:click="searchIsbn">点击扫码查询</van-button>
+  <van-card
+    desc="{{book.summary}}"
+    title="{{book.title}}"
+    thumb="{{book.pic}}"
+    desc-class="book_desc"
+    link-type="navigateTo"
+    thumb-link="../book1/book1"
+  />

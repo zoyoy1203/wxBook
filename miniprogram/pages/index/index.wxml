@@ -1,0 +1,49 @@
+<view>
+   <van-notice-bar
+        mode="closeable"
+        text="欢迎来到图书推荐小程序，这里将给你实时推荐书籍！"
+      />
+     <swiper vertical="{{false}}" indicator-dots="true" autoplay="true" interval="5000">
+        <swiper-item>
+            <image  src="cloud://zyy-b2c6cd.7a79-zyy-b2c6cd/images/bg1.jpg" data-postId="3"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="cloud://zyy-b2c6cd.7a79-zyy-b2c6cd/images/bg2.png" data-postId="4"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="cloud://zyy-b2c6cd.7a79-zyy-b2c6cd/images/bg3.jpg" data-postId="5"></image>
+        </swiper-item>
+    </swiper>
+
+
+  <view class='content'>
+    <view class='title' bindtap="titleclick1">
+      <view class='title_l'>最近更新</view>
+      <van-icon class='title_r' name="arrow" />
+      <view class='title_r'>查看更多</view>
+    </view>
+   <view class='books'>
+      <view class='book' wx:for="{{bookList1}}" wx:item="item" wx:key="index" bindtap='bookclick' data-index="{{index}}">
+        <image src='{{item.img}}'onerror="this.src='../../images/loading.gif'"></image>
+        <text class='book_title'>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='content'>
+    <view class='title' bindtap="titleclick" >
+      <view class='title_l'>精选推荐</view>
+      <van-icon class='title_r' name="arrow" />
+      <view class='title_r'>查看更多</view>
+    </view>
+    
+    <view class='books'>
+      <view class='book' wx:for="{{bookList}}" wx:item="item" wx:key="index" bindtap='bookclick' data-index="{{index}}">
+        <image src='{{item.img}}'></image>
+        <text class='book_title'>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+ 
+
+</view>
